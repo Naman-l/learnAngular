@@ -1,0 +1,73 @@
+<div>
+  <div class="letstry">
+    <app-search-input (search)="handleSearch($event, 1)"></app-search-input>
+    <div>
+      <div style="margin:10px 0px;" *ngIf="details.avatar_url">
+        <img src="{{details.avatar_url}}" alt="userAvatar" class="imgh"/>
+      </div>
+    </div>
+    <div *ngIf="showDetails" style="min-height: 170px; display:flex; min-width: 33vw;" class="idk">
+      <div>
+        <div style="" class="names">
+          <span style="display: flex;
+        flex-wrap: wrap;" *ngIf="details.name">
+            <span style="padding: 5px; ">Name:</span>
+            <span style="padding: 5px; ">{{ details.name }}</span>
+          </span>
+          <span style="display: flex;
+        flex-wrap: wrap;" *ngIf="details.twitter_username">
+            <span style="padding: 5px;">Twitter:</span>
+            <span style="padding: 5px; "><a style="color:skyblue"href="https://twitter.com/{{details.twitter_username}}" target="_blank">
+              @{{details.twitter_username }}
+              </a>
+            </span>
+            </span>
+        </div>
+        <div style="display: flex;justify-content: flex-start;align-items: baseline;" *ngIf="details.bio">
+          <span style="padding: 5px; margin: 5px 0px">Bio:</span>
+          <span>{{ details.bio }}</span>
+        </div>
+        <div style="display: flex;justify-content: flex-start;align-items: baseline;" *ngIf="details.public_repos">
+          <span style="padding: 5px; margin: 5px 0px">Total Public repos:</span>
+          <span>{{ details.public_repos }}</span>
+        </div>
+        <div style="display: flex;justify-content: flex-start; padding:5px;">
+          <span *ngIf="details.hireable === true">Hireable</span>
+          <span *ngIf="details.hireable === null">hasn't updated github</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!repos.length && pageNumber>1" class="norepo">
+    <div class="">
+      <i class=""></i>
+      <span class="" style="margin: 0 auto">No Repository Found</span>
+    </div>
+  </div>
+  <div *ngIf="loading" style="color:white;width:100%;text-align:center;">
+    <div class="">Loading.......</div>
+  </div>
+  <div *ngIf="inputTouched && repos.length" style="padding: 5px; margin: 5px" style="overflow-y: auto;max-height:50vh"
+    class="">
+    <i class=""></i>
+    <app-search-list [repos]="repos"></app-search-list>
+  </div>
+  <div class="pagination" *ngIf="repos.length && availablePages.length>1">
+    <span class="paginBtn" #input (click)="paginationCallPrevios()">Previos</span>
+
+    <span style="text-align:center;" *ngFor="let y of availablePages" #input (click)="paginationCallNumber(y)">
+      <span *ngIf="repos.length>0">
+        <span *ngIf="y == pageNumber" style="background-color: yellowgreen;
+        padding: 8px;
+        border: 1px solid #d9cccc;">
+          {{ y }}</span>
+        <span *ngIf="y !== pageNumber" style="padding: 8px;
+        background-color: rgb(32 173 172 / 85%);
+        border: 1px solid #d9cccc;">
+          {{ y }}</span>
+      </span>
+    </span>
+    <span class="paginBtn" #input (click)="paginationCallNext()" *ngIf="repos.length>0">Next
+    </span>
+  </div>
+</div>

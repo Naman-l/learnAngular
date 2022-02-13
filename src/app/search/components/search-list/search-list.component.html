@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row" *ngFor="let repo of repos">
+    <div class="col ">
+      <div class="col1">
+        <strong class="spaceOut name">{{repo.name}}</strong>
+        <span class="spaceOut">forks-> {{repo.forks}}</span>
+      </div>
+      <div class="col2">
+        <span *ngIf="repo.language" class="spaceOut">Languages: {{repo.language}}</span>
+        <span *ngIf="repo.svn_url"><a class="navigate" href="{{repo.svn_url}}" target="_blank" rel="noreferrer">
+            /Open in Github/
+          </a>
+        </span>
+      </div>
+    </div>
+    <div style="width:100%;margin-left:10px;">
+      {{repo.description}}
+    </div>
+  </div>
+</div>

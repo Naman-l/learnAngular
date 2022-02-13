@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+a{
+    text-decoration: none;
+}
+.letstry{
+    display: flex;
+    justify-content: space-between;
+    border: 5px solid #d9cccc;
+    position: sticky;
+    top: 10px;
+    padding: 10px;
+    margin: 20px 12px;
+    color: #d9cccc;
+    flex-wrap: wrap;align-items: center;
+}
+
+.imgh{
+    height:100px;
+      width: 100px;
+      border-radius:50%;
+}
+
+.names{
+    display: flex;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 8px;
+}
+
+.norepo{
+    color:red; font-size:30px; font-weight:500; text-align:center; min-height:300px; width:100%;
+}
+
+.pagination{
+    width: 100%;
+    bottom: 50px;
+    color: cornsilk;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    position:fixed;
+    
+}
+.paginBtn{
+    margin:0px 5px;
+padding: 8px 20px;
+text-align: center;
+background-color: rgb(32 173 172 / 85%);
+border: 1px solid #d9cccc;
+}
+
+@media (max-width:800px) {
+    .footer{
+        display:none;
+    }
+    
+}
