@@ -4,8 +4,8 @@ I built this project with angular 13.2(latest).
 
 How to run->
 
-take a clone of th repo.
-make sure you are using node version > 12.1. I used 12.2.
+take a clone of the repo.
+make sure you are using node version >= 12.20. I used 12.20.
 to switch node versions use nvm.
 install angular CLI using npm install -g @angular/cli
 cd learnANgular.
