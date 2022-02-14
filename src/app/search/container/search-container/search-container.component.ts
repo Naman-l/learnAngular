@@ -5,7 +5,7 @@ import { Repos } from 'src/app/shared/models/search.interface';
 @Component({
   selector: 'app-search-container',
   templateUrl: './search-container.component.html',
-  styleUrls: ['./search-container.component.css'],
+  styleUrls: ['./search-container.component.scss'],
 })
 export class SearchContainerComponent {
   inputTouched = false;

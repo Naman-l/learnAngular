@@ -1,27 +1,20 @@
-# Project1
+Hi,
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+I built this project with angular 13.2(latest).
 
-## Development server
+How to run->
+
+take a clone of th repo.
+make sure you are using node version > 12.1. I used 12.2.
+to switch node versions use nvm.
+install angular CLI using npm install -g @angular/cli
+cd learnANgular.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I took almost 6-7 hours to build this.
+Took me like an hour reading about promises, props and other important things in angular 13.2
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The app includes a searchInput,searchList and searchContainer component.
+I have included the pagination in my search-container as I was previosly handling my functions from this container.
